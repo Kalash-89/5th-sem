@@ -1,23 +1,22 @@
 const myPromise = new Promise((resolve, reject) => {
-    let age = 20;
+    let age = 17;
     if (age >= 18) {
-        resolve("You are eligible to vote.");
+        resolve("Eligible for vote...");
     } else {
-        reject("You are not eligible to vote.");
+        reject("Not Eligible for vote...");
     }
 })
-//myPromise
-    //.then((message) => 
-        //console.log(message))
-    //.catch((error) => 
-     //   console.log(error)
-   // )
-   const checkVoteEligibility = async () => {
-    try { 
-        const message = await myPromise;
-        console.log(message);
+const checkVoteEligiblity = async () => {
+    try {
+        const msg = await myPromise;
+        console.log(msg);
     } catch (error) {
         console.log(error);
     }
 }
-checkVoteEligibility();
+checkVoteEligiblity();
+
+// myPromise
+// .then((msg) => console.log(msg))
+// .catch((error) => console.log(error))
+
